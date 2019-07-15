@@ -48,12 +48,9 @@ exports.store = (req, res) => {
             if(Array.isArray(fixture) && fixture.length) {
                 return res.status(400).json({success: false, message: "Fixture for those teams already exist"});            
             } else {
-
-                //@todo check if the teams exist
                 const newFixture = new Fixture({homeTeamId, awayTeamId, matchDate, match_played: false});
                 newFixture.save()
                     .then(fixture => {
-                        //fixture.populate('homeTeamId', 'name').populate('awayTeamId', 'name')
                         res.status(201).json({status: true, message: "Fixture created successfully", fixture})
                     })
                     .catch(err => res.status(500).json({sussess: false, message: "Unable to save"}))        
@@ -97,9 +94,6 @@ exports.delete = (req, res) => {
     Fixture.findById(req.params.id)
         .then(fixture => {
             if(fixture) {
-                // if(fixture.match_played) {
-                //     return res.status(400).json({success: false, message: "You cannot delete a fixture that has been completed"});
-                // }
                 fixture.remove()
                     .then(() => res.status(200).json({success: true, message: "Fixture deleted successfully"}))
                     .catch(err => res.status(500).json({success: false, message: "Error deleting fixture. Please try again"}))

@@ -8,7 +8,7 @@
     "dev": "nodemon server.js",
     "seed": "node databaseSeeder.js",
     "test": "jest",
-    "heroku-postbuild": "npm run test && npm run seed"
+    "heroku-postbuild": "npm run seed"
   },
   "author": "Okoro Christopher Efe",
   "license": "ISC",
