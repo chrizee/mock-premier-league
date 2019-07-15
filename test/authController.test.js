@@ -1,6 +1,6 @@
 const request = require('supertest');
-const app = require('../../app');
-const User = require('../../src/v1/models/User');
+const app = require('../app');
+const User = require('../src/v1/models/User');
 
 const dynamicUser = {name: 'john', email: Date.now() + "john@example.com", password: "password"};
 const staticUser = {name: 'john', email: "john@example.com", password: "password"};

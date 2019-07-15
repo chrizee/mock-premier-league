@@ -1,5 +1,5 @@
 const request = require('supertest');
-const app = require('../../app');
+const app = require('../app');
 const searchRoute = '/api/v1/search';
 const searchTeamWithCorrectName = '?entity=teams&name=chel';
 const searchTeamWithWrongName = '?entity=teams&nae=chel';

@@ -1,9 +1,9 @@
 const request = require('supertest');
 
-const app = require('../../app');
-const Team = require('../../src/v1/models/team');
-const Fixture = require('../../src/v1/models/fixture');
-const User = require('../../src/v1/models/User');
+const app = require('../app');
+const Team = require('../src/v1/models/team');
+const Fixture = require('../src/v1/models/fixture');
+const User = require('../src/v1/models/User');
 
 const teamRoute = '/api/v1/teams';
 const fixtureRoute = '/api/v1/fixtures';

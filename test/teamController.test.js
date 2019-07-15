@@ -1,8 +1,8 @@
 const request = require('supertest');
 
-const app = require('../../app');
-const Team = require('../../src/v1/models/team');
-const User = require('../../src/v1/models/User');
+const app = require('../app');
+const Team = require('../src/v1/models/team');
+const User = require('../src/v1/models/User');
 
 const teamRoute = '/api/v1/teams';
 const team = {name: 'chelsea'};
