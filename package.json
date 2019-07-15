@@ -1,0 +1,31 @@
+{
+  "name": "premierleague",
+  "version": "1.0.0",
+  "description": "A simple mock api for premier league fixtures",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "seed": "node databaseSeeder.js",
+    "test": "jest --forceExit",
+    "heroku-postbuild": "npm run test && npm run seed"
+  },
+  "author": "Okoro Christopher Efe",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.6.4"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0",
+    "supertest": "^4.0.2",
+    "nodemon": "^1.19.1"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
